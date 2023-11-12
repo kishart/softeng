@@ -54,6 +54,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
+
 Route::get('admin/booking-list',[BookingController::class,'index']);
 Route::get('user/add-booking',[BookingController::class,'addBooking']);
 Route::post('save-booking',[BookingController::class,'saveBooking']);
