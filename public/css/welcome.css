@@ -1,0 +1,52 @@
+body{
+    background: #CD825B;
+}
+.container{
+    margin-top: 8%;
+}
+.col-md-8{
+    width: 50%;
+}
+.signlink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.loginlabel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 4rem;
+}
+button.btn{
+    background-color: #CD825B;
+    color: #854836;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+button.btn:hover{
+    background-color: #854836;
+    color: #CD825B;
+    font-size: 15px;
+ 
+}
+
+a, .btn-link {
+ 
+    background-color: transparent;
+    text-decoration: none;
+    color: #854836;
+    font-weight: bold;
+  }
+  a:hover, .btn-link:hover {
+ 
+    background-color: transparent;
+    text-decoration: none;
+    color: #CD825B;
+    font-weight: bold;
+  }
