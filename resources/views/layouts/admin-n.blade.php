@@ -14,12 +14,21 @@
   <div class="area"></div><nav class="main-menu">
             <ul>
                 <li>
-                    <a href="/admin/booking-list">
+                    <a href="{{url('admin/booking-list')}}">
                         <i class="fa fa-book fa-2x"></i>
                         <span class="nav-text">
                            Booking List
                         </span>
                     </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="{{url('post_photo')}}">
+                       <i class="fa fa-camera-retro fa-2x"></i>
+                        <span class="nav-text">
+                            Post Photos
+                        </span>
+                    </a>
+                   
                 </li>
                 <li>
                     <a href="https://jbfarrow.com">
@@ -48,15 +57,7 @@
                     </a>
                     
                 </li>
-                <li class="has-subnav">
-                    <a href="#">
-                       <i class="fa fa-camera-retro fa-2x"></i>
-                        <span class="nav-text">
-                            Survey Photos
-                        </span>
-                    </a>
-                   
-                </li>
+               
                 <li>
                     <a href="#">
                         <i class="fa fa-film fa-2x"></i>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,6 +62,8 @@ Route::post('save-booking',[BookingController::class,'saveBooking']);
 Route::get('admin/edit-booking/{id}',[BookingController::class,'editBooking']);
 Route::post('admin/update-booking',[BookingController::class,'updateBooking']);
 Route::get('delete-booking/{id}',[BookingController::class,'deleteBooking']);
+
+Route::get('post_photo', [AdminController::class, 'post_photo']);
 
 
 Route::get('/admin/dashboard', function () {
