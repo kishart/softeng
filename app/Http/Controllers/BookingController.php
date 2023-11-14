@@ -14,6 +14,7 @@ class BookingController extends Controller
         public function addBooking(){
         return view('user/add-booking');
     }
+
         public function saveBooking(Request $request){
             $request->validate([
                 'name' => 'required',

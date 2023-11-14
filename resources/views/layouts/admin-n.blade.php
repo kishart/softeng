@@ -14,6 +14,14 @@
   <div class="area"></div><nav class="main-menu">
             <ul>
                 <li>
+                    <a href="/admin/booking-list">
+                        <i class="fa fa-book fa-2x"></i>
+                        <span class="nav-text">
+                           Booking List
+                        </span>
+                    </a>
+                </li>
+                <li>
                     <a href="https://jbfarrow.com">
                         <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">
@@ -57,14 +65,7 @@
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-book fa-2x"></i>
-                        <span class="nav-text">
-                           Surveying Jobs
-                        </span>
-                    </a>
-                </li>
+               
                 <li>
                    <a href="#">
                        <i class="fa fa-cogs fa-2x"></i>
