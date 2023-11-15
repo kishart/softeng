@@ -25,16 +25,16 @@
                     <a href="{{url('post_photo')}}">
                        <i class="fa fa-camera-retro fa-2x"></i>
                         <span class="nav-text">
-                            Post Photos
+                            Upload Photos
                         </span>
                     </a>
                    
                 </li>
                 <li>
-                    <a href="https://jbfarrow.com">
+                    <a href="{{url('/show_post')}}">
                         <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">
-                           Community Dashboard
+                          Show Post
                         </span>
                     </a>
                   
@@ -114,6 +114,8 @@
                                           </form>
                                       </div>
                 </li>
+
+                
             
         </nav>
 

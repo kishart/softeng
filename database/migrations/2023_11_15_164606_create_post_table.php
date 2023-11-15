@@ -19,6 +19,7 @@ return new class extends Migration
             $table->longText('description')->nullable();
             $table->string('image1')->nullable();
             $table->string('image2')->nullable();
+            $table->string('post_status')->nullable();
             $table->timestamps();
         });
     }

@@ -2,6 +2,7 @@
     .content{
         background-color: #F2C1A8;
         height: 100%;
+        padding-left: 5%;
     }
 
     .post_title{
@@ -15,7 +16,7 @@
         text-align: center;
         padding: 30px;
     }
-    lavel{
+    label{
         display:inline-block;
         width: 200px;
     }
@@ -51,12 +52,12 @@
 
             </div>
             <div class="div_center">
-                <label>Add Image</label>
+                <label>Best Shot</label>
                 <input type="file" name="image1">
                
             </div>
             <div class="div_center">
-                <label>Add Another Image</label>
+                <label>Feedback</label>
                 <input type="file" name="image2">
               
             </div>
