@@ -40,6 +40,13 @@
 
 
  <div class="content">
+     @if(session()->has('message'))
+    <div class="alert alert-danger d-flex justify-content-center" role="alert">
+        <button type="button" class="btn-close" data-dismiss="alert" aria-label="true"></button>
+        {{session()->get('message')}}
+    </div>
+    
+    @endif
     <h1 class="post_title">All Post</h1>
 
     <table class="table_deg">
@@ -49,6 +56,7 @@
             <th>Post Status</th>
             <th>Best Shot</th>
             <th>Feedback</th>
+            <th>Delete</th>
             
         </tr>
 
@@ -59,7 +67,11 @@
             <td>{{$post->post_status}}</td>
             <td><img class="img_deg" src="postimage1/{{$post->image1}}"></td>
             
-            <td><img class="img_deg" src="postimage2/{{$post->image2}}"></td>
+            <td>
+                <img class="img_deg" src="postimage2/{{$post->image2}}">
+            </td>
+
+            <td><a href="{{url('delete_post',$post->id)}}" class="btn btn-danger" onclick="return confirm('are you sure to delete this post?')">Delete</a></td>
         </tr>
     @endforeach
     </table>
