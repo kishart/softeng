@@ -27,6 +27,14 @@
 
 
 <div class="content">
+    @if(Session::has('success'))
+    <div class="alert alert-success d-flex justify-content-center" role="alert">
+        {{Session::get('success')}}
+    </div>
+    @endif
+
+
+
     <h1 class="post_title">Add Post</h1>
 
     <div>
@@ -35,18 +43,22 @@
             <div class="div_center">
                 <label>Post Title</label>
                 <input type="text" name="title">
+             
             </div>
             <div class="div_center">
                 <label>Post Description</label>
                 <textarea name="description"></textarea>
+
             </div>
             <div class="div_center">
                 <label>Add Image</label>
                 <input type="file" name="image1">
+               
             </div>
             <div class="div_center">
                 <label>Add Another Image</label>
                 <input type="file" name="image2">
+              
             </div>
             <div class="div_center">
                 <input type="submit" class="btn btn-primary">
