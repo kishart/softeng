@@ -1,6 +1,7 @@
 <style>
     .content{
         background-color: #F2C1A8;
+        height: 100%;
     }
 
     .post_title{
@@ -29,7 +30,8 @@
     <h1 class="post_title">Add Post</h1>
 
     <div>
-        <form>
+        <form action="{{url('add_photo')}}" method="POST" enctype="multipart/form-data">
+           @csrf
             <div class="div_center">
                 <label>Post Title</label>
                 <input type="text" name="title">
@@ -53,4 +55,3 @@
         </form>
     </div>
 </div>
-

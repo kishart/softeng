@@ -64,6 +64,7 @@ Route::post('admin/update-booking',[BookingController::class,'updateBooking']);
 Route::get('delete-booking/{id}',[BookingController::class,'deleteBooking']);
 
 Route::get('post_photo', [AdminController::class, 'post_photo']);
+Route::post('add_photo', [AdminController::class, 'add_photo']);
 
 
 Route::get('/admin/dashboard', function () {
