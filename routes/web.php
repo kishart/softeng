@@ -67,6 +67,9 @@ Route::get('post_photo', [AdminController::class, 'post_photo']);
 Route::post('add_photo', [AdminController::class, 'add_photo']);
 Route::get('/show_post', [AdminController::class, 'show_post']);
 Route::get('/delete_post/{id}', [AdminController::class, 'delete_post']);
+Route::get('/edit_post/{id}', [AdminController::class, 'edit_post']);
+Route::post('/update_post/{id}', [AdminController::class, 'update_post']);
+
 
 Route::get('/admin/dashboard', function () {
      return view('admin.dashboard');

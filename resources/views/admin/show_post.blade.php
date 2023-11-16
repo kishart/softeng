@@ -56,6 +56,7 @@
             <th>Post Status</th>
             <th>Best Shot</th>
             <th>Feedback</th>
+            <th>Edit</th>
             <th>Delete</th>
             
         </tr>
@@ -69,6 +70,12 @@
             
             <td>
                 <img class="img_deg" src="postimage2/{{$post->image2}}">
+            </td>
+
+            <td>
+                <a href="{{url('edit_post',$post->id)}}" class="btn btn-success">
+                    Edit
+                   </a>
             </td>
 
             <td>
@@ -87,7 +94,7 @@
         var urlToRedirect=ev.currentTarget.getAttribute('href');
         
         console.log(urlToRedirect);
-        
+
         swal({
             title:"Are you sure you want to delete this " , 
             text: "You won't be able to revert this delete",
