@@ -17,6 +17,12 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
+<style>
+  .nav-item .nav-link,  .navbar-brand{
+    color: #CD825B;
+  }
+ 
+</style>
 <body>
     <div id="app">
       <!--navbar-->

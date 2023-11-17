@@ -1,9 +1,9 @@
 @extends('layouts.navbar')
 @section('content')
-<link rel="stylesheet" href="{{url('css/services.css')}}">
+<link rel="stylesheet" href="{{url('css/home.css')}}">
 
 
-<body>
+<body class="bode">
 	<div class="wrapper">
 	<div class="container">
 	  <div class="hero-section">
@@ -56,12 +56,12 @@
 		</div>
 	  </div>
 
-	  
+	  <button class="button-59" role="button">
+		<a class="nav-link" href="/user/add-booking">Set Appointment</a>
+	  </button>
 	</div>
   </div>
-  <button class="button-59" role="button">
-	<a class="nav-link" href="/user/add-booking">Set Appointment</a>
-  </button>
+  
 
 
   </body>
