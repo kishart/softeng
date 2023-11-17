@@ -91,7 +91,8 @@ class AdminController extends Controller
         return view('user.photos', compact('post'));
     }
 
-   
+    
+
 
 
 

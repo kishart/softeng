@@ -27,8 +27,8 @@ Route::middleware(['auth'])->group(function () {
 
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/user/services', function(){
-        return view('user.services');
+    Route::get('/user/photos', function(){
+        return view('user.photos');
     });
 });
 

@@ -9,16 +9,36 @@
     <div class="container">
         <h1 class="services_taital">Blog Posts</h1>
         <p class="services_text">There are many variations of passages of Lorem Ipssm abaiaoaiuc aiusi suufa suuags fa gfasg asg liuasgc iasgcias gcisagc </p>
-        <div class="services_section_2">
-            <div class="row">
+       
                 
                 @foreach($post as $post)
+
                 <h4>{{$post->title}}</h4>
-                <div><img src="/postimage1/{{$post->image1}}" alt=""></div>
-                <div><img src="/postimage2/{{$post->image2}}" alt=""></div>
-                <h4>{{$post->description}}</h4>
-              
-             
+
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="/postimage1/{{$post->image1}}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/postimage2/{{$post->image2}}" class="d-block w-100" alt="...">
+                      </div>
+                     
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+
+
+
+                
             @endforeach
                 
             </div>
@@ -27,3 +47,4 @@
 </div>
 
 @endsection
+
