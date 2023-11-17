@@ -13,10 +13,6 @@
       </div>
   
 
-      <div class="welcomeline">
-       <h2>husnie</h2>
-      </div>
-
 
   </div>
 </section>

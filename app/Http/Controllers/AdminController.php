@@ -85,4 +85,18 @@ class AdminController extends Controller
       $data->save();
       return redirect()->back()->with('message', 'Post updated successfully');
       }
+
+ public function photos(){
+        $post=Post::all();
+        return view('user.photos', compact('post'));
+    }
+
+   
+
+
+
+
+
+
+
 }

@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
+
 
 class HomeController extends Controller
 {
@@ -26,8 +29,11 @@ class HomeController extends Controller
         return view('user.home');
     }
 
-        public function adminHome()
+    public function adminHome()
     {
         return view('admin.admin');
     }
+
+
+
 }

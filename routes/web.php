@@ -1,8 +1,9 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,6 +48,12 @@ Route::middleware(['auth'])->group(function () {
         return view('user.contact');
     });
 });
+Route::middleware(['auth'])->group(function () {
+    Route::get('/user/photos', function(){
+        return view('user.photos');
+    });
+});
+Route::get('user/photos', [AdminController::class, 'photos']);
 
 
 Auth::routes();
