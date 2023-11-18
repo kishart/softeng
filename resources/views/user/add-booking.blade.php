@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Booking</title>
+@extends('layouts.navbar')
+@section('content')
+<link rel="stylesheet" href="{{url('css/add-booking.css')}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Inter&display=swap" rel="stylesheet">
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -23,7 +22,7 @@
                     <div class="md-3">
                         <label class="form-label">Name:</label>
                         <input type="text" class="form-control" name="name" 
-                        placeholder="Enter Name" value="{{old('name')}}">
+                        value="{{old('name')}}">
                         @error('name')
                         <div class="alert alert-danger" role="alert">
                             {{($message)}}
@@ -34,7 +33,7 @@
                     <div class="md-3">
                         <label class="form-label">Email:</label>
                         <input type="text" class="form-control" name="email" 
-                        placeholder="Enter Email" value="{{old('email')}}">
+                         value="{{old('email')}}">
                         @error('email')
                         <div class="alert alert-danger" role="alert">
                             {{($message)}}
@@ -44,7 +43,7 @@
                     <div class="md-3">
                         <label class="form-label">Phone:</label>
                         <input type="text" class="form-control" name="phone" 
-                        placeholder="Enter Phone Number" value="{{old('phone')}}">
+                        value="{{old('phone')}}">
                         @error('phone')
                         <div class="alert alert-danger" role="alert">
                             {{($message)}}
@@ -54,7 +53,7 @@
                     <div class="md-3">
                         <label class="form-label">Date:</label>
                         <input type="date" class="form-control" name="date" 
-                        placeholder="Enter your chosen date" value="{{old('date')}}">
+                        value="{{old('date')}}">
                         @error('date')
                         <div class="alert alert-danger" role="alert">
                             {{($message)}}
@@ -64,7 +63,7 @@
                     <div class="md-3">
                         <label class="form-label">Time:</label>
                         <input type="text" class="form-control" name="time" 
-                        placeholder="Enter your chosen time" value="{{old('time')}}">
+                        value="{{old('time')}}">
                         @error('time')
                         <div class="alert alert-danger" role="alert">
                             {{($message)}}
@@ -74,15 +73,14 @@
                     <div class="md-3">
                         <label class="form-label">Message:</label>
                         <textarea class="form-control" name="message" 
-                        placeholder="Enter your message for another detail"> {{old('message')}}</textarea>
+                       > {{old('message')}}</textarea>
                             @error('message')
                             <div class="alert alert-danger" role="alert">
                                 {{($message)}}
                             </div>
                             @enderror 
                     </div><br>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <a href="{{url('booking-list')}}" class="btn btn-danger">Back</a>
+                    <button type="submit">Submit</button>
                 </form>
 
             </div>
@@ -91,4 +89,5 @@
 
 
 </body>
-</html>
+
+@endsection

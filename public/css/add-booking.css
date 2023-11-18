@@ -1,0 +1,27 @@
+.py-4{
+    background-color: #F2D0BE;
+}
+form{
+
+    background-color: #D0906F;
+    padding: 25px;
+    border-radius: 10px;
+  width: 200%;
+  margin-left: -40%;
+} 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+label{
+    color: #854836;
+    font-family: chewy;
+}
+.form-control{
+    color: #854836;
+}
+button{
+    background-color:#854836;
+}
