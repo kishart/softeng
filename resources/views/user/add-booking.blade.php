@@ -62,7 +62,7 @@
                     </div>
                     <div class="md-3">
                         <label class="form-label">Time:</label>
-                        <input type="text" class="form-control" name="time" 
+                        <input type="time" class="form-control" name="time" 
                         value="{{old('time')}}">
                         @error('time')
                         <div class="alert alert-danger" role="alert">
