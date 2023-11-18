@@ -53,7 +53,7 @@ Route::middleware(['auth'])->group(function () {
         return view('user.photos');
     });
 });
-Route::get('user/photos', [AdminController::class, 'photos']);
+Route::get('user/photos', [HomeController::class, 'photos']);
 
 
 Auth::routes();

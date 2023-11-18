@@ -33,7 +33,10 @@ class HomeController extends Controller
     {
         return view('admin.admin');
     }
-
+ public function photos(){
+        $post=Post::all();
+        return view('user.photos', compact('post'));
+    }
 
 
 }
