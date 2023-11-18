@@ -9,7 +9,7 @@
 	  <div class="hero-section">
 		<div class="gallery">
 		  <div class="image-section">
-			<img src="https://scontent.fozc1-1.fna.fbcdn.net/v/t39.30808-6/370433043_737670265038414_1852438112669516720_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lcf1Hc6KXTIAX9Ep2Nm&_nc_ht=scontent.fozc1-1.fna&oh=00_AfDwR6Am0sGn7TcaLXInpPJTwmOsqO4FLVtsWBoVb-GPAw&oe=655452CA" alt="graduation">
+			<img src="https://scontent.fozc1-1.fna.fbcdn.net/v/t39.30808-6/370433043_737670265038414_1852438112669516720_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Zo7yz5Fhq-wAX-CtF9-&_nc_ht=scontent.fozc1-1.fna&oh=00_AfArhyZu27ujATX3fLGb6LRzgr94D6d4ZWOMSa4tTNPauA&oe=655C3BCA" alt="graduation">
 		  </div>
 		  <div class="caption">
 			<h2>Graduation</h2>
@@ -17,7 +17,7 @@
 		</div>
 		<div class="gallery">
 		  <div class="image-section">
-			<img src="https://scontent.fozc1-1.fna.fbcdn.net/v/t39.30808-6/368880387_735911281880979_1491613323290205177_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=AsSlKKAPu2oAX_roMtN&_nc_ht=scontent.fozc1-1.fna&oh=00_AfD5xl864Enx7Oj9OH1kjlee72mdc7_sAJJJsIRoZhyCsA&oe=655481A6" alt="birthday">
+			<img src="https://scontent.fozc1-1.fna.fbcdn.net/v/t39.30808-6/368468781_735911958547578_1781721343468589615_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ARvgJtzJvekAX9IErca&_nc_ht=scontent.fozc1-1.fna&oh=00_AfCBzidT7dkaaDuct87ApPu0bcm0nvgkbST1wMNJlz7UcA&oe=655CAFD4" alt="birthday">
 		  </div>
 		  <div class="caption">
 			<h2>Birthday</h2>
@@ -31,6 +31,15 @@
 			<h2>Family Picture</h2>
 		  </div>
 		</div>
+	  </div>
+
+	<div class="buttona">
+		<button class="button-59" role="button">
+			<a class="nav-link" href="/user/add-booking">Set Appointment</a>
+		  </button>
+	</div>
+
+	<div class="hero-section">
 		<div class="gallery">
 		  <div class="image-section">
 			<img src="https://scontent.fozc1-1.fna.fbcdn.net/v/t39.30808-6/349854826_624776972911689_988541419377225249_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=mx2ZYVG3tr4AX_k9UwZ&_nc_ht=scontent.fozc1-1.fna&oh=00_AfBo-vraIXXTTKk8nVaHNn26QzYs_o7tHeapPclOHpGpJg&oe=65558884" alt="">
@@ -56,9 +65,7 @@
 		</div>
 	  </div>
 
-	  <button class="button-59" role="button">
-		<a class="nav-link" href="/user/add-booking">Set Appointment</a>
-	  </button>
+	
 	</div>
   </div>
   
