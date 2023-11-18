@@ -21,6 +21,10 @@
   .nav-item .nav-link,  .navbar-brand{
     color: #CD825B;
   }
+  a.navbar-brand.fs-4{
+    color: #CD825B;
+  }
+  
  
 </style>
 <body>
@@ -29,7 +33,7 @@
     <nav class="navbar navbar-expand-lg  navbar-bg-white bg-transparent ">
         <div class="container ">
           <!--logo-->
-          <a class="navbar-brand fs-4" href="#">Husnie Photogrphy</a>
+          <a class="navbar-brand fs-4"  href="#">Husnie Photogrphy</a>
           <!--toggle btn-->
           <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

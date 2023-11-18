@@ -11,7 +11,7 @@
     <div class="container" style="margin-top:20px">
         <div class="row">
             <div class="col-md-12">
-                <h2>Add Booking</h2>
+                <h2 class="title">Add Booking</h2>
                 @if(Session::has('success'))
                 <div class="alert alert-success" role="alert">
                     {{Session::get('success')}}
@@ -80,7 +80,7 @@
                             </div>
                             @enderror 
                     </div><br>
-                    <button type="submit">Submit</button>
+                    <button type="submit"class="button-28" role="button">Submit</button>
                 </form>
 
             </div>
