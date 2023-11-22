@@ -45,24 +45,26 @@ class HomeController extends Controller
         
     }
 
-    public function adminHome()
+public function adminHome()
     {
         return view('admin.admin');
     }
- public function photos(){
+public function photos(){
         $post=Post::all();
         return view('user.photos', compact('post'));
     }
-   public function profile()
-    {
-        $userId = Auth::id(); // Assigning the user ID to $userId variable
-
-        if ($userId) {
-            return view('user.profile');
-        } else {
-            return redirect()->back();
-        }
+public function profile()
+{
+    if(Auth::id()){
+         $userId = Auth::user()->id;
+        $appoint = booking::where('user_id', $userid)->get();
+        return view('user.profile', compact('appoint'));
     }
+    else{
+        return redirect()->back();
+    }
+}
+
 
 
 }

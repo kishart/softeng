@@ -71,7 +71,7 @@
                         @enderror
                     </div>
                     <div class="md-3">
-                        <label class="form-label">Message:</label>
+                        <label class="form-label">Details:</label>
                         <textarea class="form-control" name="message" 
                        > {{old('message')}}</textarea>
                             @error('message')
