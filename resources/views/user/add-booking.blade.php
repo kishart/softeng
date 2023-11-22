@@ -11,11 +11,7 @@
     <div class="container" style="margin-top:20px">
         <div class="row">
             <div class="col-md-12">
-<<<<<<< HEAD
                 <h2 class="title">Set an Appointment</h2>
-=======
-                <h2 class="title">Set Appointment</h2>
->>>>>>> 80700d06f4032704e91d33a3bfee4d1664b87778
                 @if(Session::has('success'))
                 <div class="alert alert-success" role="alert">
                     {{Session::get('success')}}

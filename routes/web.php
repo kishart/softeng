@@ -26,11 +26,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/user/add-booking', function(){
-        return view('user.add-booking');
-    });
-});
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/user/photos', function(){
@@ -68,7 +64,9 @@ Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'adminHome
 
 Route::get('admin/booking-list',[BookingController::class,'index']);
 Route::get('user/add-booking',[BookingController::class,'addBooking']);
+
 Route::post('save-booking',[BookingController::class,'saveBooking']);
+
 Route::get('admin/edit-booking/{id}',[BookingController::class,'editBooking']);
 Route::post('admin/update-booking',[BookingController::class,'updateBooking']);
 Route::get('delete-booking/{id}',[BookingController::class,'deleteBooking']);

@@ -26,7 +26,23 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('user.home');
+         if(Auth::id()){
+            return view('user.home');
+        }
+        else{
+            return redirect()->back();
+        }
+        
+    }
+    public function addBooking()
+    {
+         if(Auth::id()){
+            return view('user.add-booking');
+        }
+        else{
+            return redirect()->back();
+        }
+        
     }
 
     public function adminHome()
@@ -37,6 +53,16 @@ class HomeController extends Controller
         $post=Post::all();
         return view('user.photos', compact('post'));
     }
-
+    public function profile()
+    {
+        $userid
+        if(Auth::id()){
+            return view('user.profile');
+        }
+        else{
+            return redirect()->back();
+        }
+        
+    }
 
 }

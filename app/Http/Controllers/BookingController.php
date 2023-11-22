@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Booking;
+use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
@@ -41,6 +42,11 @@ class BookingController extends Controller
             $stu->date = $date;
             $stu->time = $time;
             $stu->message = $message;
+            $stu->status = 'In progress';
+            if(Auth::id()){
+            $stu->user_id = Auth::user()->id;
+           
+            }
             $stu->save();
 
             return redirect()->back()->with('success', 'booking added successfully');
@@ -81,4 +87,6 @@ class BookingController extends Controller
           return redirect()->back()->with('success', 'booking deleted successfully');
     
     }
+   
+
 }

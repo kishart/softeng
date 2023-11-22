@@ -1,12 +1,18 @@
 @extends('layouts.navbar')
 @section('content')
 
-<div>
+<div align="center" style="padding:70px;">
 	<table>
+		<tr style="background-color: black; color:white;">
+			<th style="padding: 10px; font-size:20px;">Details</th>
+			<th style="padding: 10px; font-size:20px;">Date</th>
+			<th style="padding: 10px; font-size:20px;">Time</th>
+		</tr>
+
 		<tr>
-			<th>Details</th>
-			<th>Date</th>
-			<th>Time</th>
+			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 	</table>
 </div>
