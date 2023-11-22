@@ -53,16 +53,16 @@ class HomeController extends Controller
         $post=Post::all();
         return view('user.photos', compact('post'));
     }
-    public function profile()
+   public function profile()
     {
-        $userid
-        if(Auth::id()){
+        $userId = Auth::id(); // Assigning the user ID to $userId variable
+
+        if ($userId) {
             return view('user.profile');
-        }
-        else{
+        } else {
             return redirect()->back();
         }
-        
     }
+
 
 }

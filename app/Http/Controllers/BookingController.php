@@ -12,11 +12,11 @@ class BookingController extends Controller
         $data = Booking::get();
         return view('admin/booking-list', compact('data'));
     }
-        public function addBooking(){
+    public function addBooking(){
         return view('user/add-booking');
     }
 
-        public function saveBooking(Request $request){
+    public function saveBooking(Request $request){
             $request->validate([
                 'name' => 'required',
                 'email' => 'required|email',
