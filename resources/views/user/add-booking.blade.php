@@ -11,7 +11,7 @@
     <div class="container" style="margin-top:20px">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="title">Add Booking</h2>
+                <h2 class="title">Set an Appointment</h2>
                 @if(Session::has('success'))
                 <div class="alert alert-success" role="alert">
                     {{Session::get('success')}}

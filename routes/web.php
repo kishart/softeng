@@ -27,6 +27,12 @@ Route::middleware(['auth'])->group(function () {
 
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('/user/add-booking', function(){
+        return view('user.add-booking');
+    });
+});
+
+Route::middleware(['auth'])->group(function () {
     Route::get('/user/photos', function(){
         return view('user.photos');
     });
@@ -48,11 +54,8 @@ Route::middleware(['auth'])->group(function () {
         return view('user.contact');
     });
 });
-Route::middleware(['auth'])->group(function () {
-    Route::get('/user/photos', function(){
-        return view('user.photos');
-    });
-});
+
+
 Route::get('user/photos', [HomeController::class, 'photos']);
 
 
