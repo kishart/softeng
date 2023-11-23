@@ -20,7 +20,7 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
+                            <th>Name: </th>
                             <th>Email</th>
                             <th>Phone</th>
                             <th>Date</th>
