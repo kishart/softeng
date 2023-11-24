@@ -99,4 +99,10 @@ class BookingController extends Controller
         }
         
     }
+    public function cancel_booking($id){
+        $data=booking::find($id);
+        $data->delete();
+        return redirect()->back();
+
+    }
 }
