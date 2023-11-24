@@ -88,8 +88,15 @@ class BookingController extends Controller
           return redirect()->back()->with('success', 'booking deleted successfully');
     
     }
-    public function appointment(){
-        return view('user/add-booking');
+    public function profile(){
+        if(Auth::id()){
+            $userid=Auth::user()->id;
+            $book=Booking::where('user_id', $userid)->get();
+        return view('user.profile', compact('book'));
+        }
+        else{
+            return redirect()->back();
+        }
+        
     }
-
 }

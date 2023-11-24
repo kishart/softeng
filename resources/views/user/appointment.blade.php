@@ -14,46 +14,73 @@
                 <h2 class="title">Set an Appointment</h2>
                 
               
-                <form method="post" action="{{url('save-booking')}}">
-                   @csrf
+                <form method="POST" action="{{url('save-appointment')}}">
+                    @csrf
                     <div class="md-3">
                         <label class="form-label">Name:</label>
                         <input type="text" class="form-control" name="name" 
-                        value="{{old('name')}}">
-                      
-                       
+                        placeholder="Enter Name" value="{{old('name')}}">
+                        @error('name')
+                        <div class="alert alert-danger" role="alert">
+                            {{($message)}}
+                        </div>
+                        @enderror
+                        
                     </div>
                     <div class="md-3">
                         <label class="form-label">Email:</label>
                         <input type="text" class="form-control" name="email" 
-                         value="{{old('email')}}">
-                      
+                        placeholder="Enter Email" value="{{old('email')}}">
+                        @error('email')
+                        <div class="alert alert-danger" role="alert">
+                            {{($message)}}
+                        </div>
+                        @enderror
                     </div>
                     <div class="md-3">
                         <label class="form-label">Phone:</label>
                         <input type="text" class="form-control" name="phone" 
-                        value="{{old('phone')}}">
-                      
+                        placeholder="Enter Phone Number" value="{{old('phone')}}">
+                        @error('phone')
+                        <div class="alert alert-danger" role="alert">
+                            {{($message)}}
+                        </div>
+                        @enderror
                     </div>
                     <div class="md-3">
                         <label class="form-label">Date:</label>
                         <input type="date" class="form-control" name="date" 
-                        value="{{old('date')}}">
-                      
+                        placeholder="Enter your chosen date" value="{{old('date')}}">
+                        @error('date')
+                        <div class="alert alert-danger" role="alert">
+                            {{($message)}}
+                        </div>
+                        @enderror
                     </div>
                     <div class="md-3">
                         <label class="form-label">Time:</label>
                         <input type="time" class="form-control" name="time" 
-                        value="{{old('time')}}">
-                       
+                        placeholder="Enter your chosen time" value="{{old('time')}}">
+                        @error('time')
+                        <div class="alert alert-danger" role="alert">
+                            {{($message)}}
+                        </div>
+                        @enderror
                     </div>
                     <div class="md-3">
-                        <label class="form-label">Details:</label>
+                        <label class="form-label">Message:</label>
                         <textarea class="form-control" name="message" 
-                       >
+                        placeholder="Enter your message for another detail"> {{old('message')}}</textarea>
+                            @error('message')
+                            <div class="alert alert-danger" role="alert">
+                                {{($message)}}
+                            </div>
+                            @enderror 
                     </div><br>
-                    <button type="submit"class="button-28" role="button">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="{{url('booking-list')}}" class="btn btn-danger">Back</a>
                 </form>
+
 
             </div>
         </div>

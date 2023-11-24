@@ -40,11 +40,7 @@ Route::middleware(['auth'])->group(function () {
     });
 });
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/user/profile', function(){
-        return view('user.profile');
-    });
-});
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/user/contact', function(){
         return view('user.contact');
@@ -53,6 +49,7 @@ Route::middleware(['auth'])->group(function () {
 
 
 Route::get('user/photos', [HomeController::class, 'photos']);
+Route::get('user/profile', [BookingController::class, 'profile']);
 
 
 Auth::routes();
@@ -86,5 +83,3 @@ Route::get('/admin/dashboard', function () {
      return view('admin.dashboard');
 });
 
-
-Route::get('user/appointment',[BookingController::class,'appointment']);
