@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Booking;
+use App\Models\Appointment;
 use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
@@ -87,6 +88,8 @@ class BookingController extends Controller
           return redirect()->back()->with('success', 'booking deleted successfully');
     
     }
-   
+    public function appointment(){
+        return view('user/add-booking');
+    }
 
 }

@@ -86,3 +86,5 @@ Route::get('/admin/dashboard', function () {
      return view('admin.dashboard');
 });
 
+
+Route::get('user/appointment',[BookingController::class,'appointment']);
