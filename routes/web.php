@@ -63,8 +63,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
-
-Route::get('admin/booking-list',[BookingController::class,'index']);
+Route::middleware(['auth'])->group(function () {
+    Route::get('admin/booking-list', [BookingController::class, 'index']);
+  
+});
 Route::get('user/add-booking',[BookingController::class,'addBooking']);
 
 Route::post('save-booking',[BookingController::class,'saveBooking']);
@@ -73,9 +75,15 @@ Route::get('admin/edit-booking/{id}',[BookingController::class,'editBooking']);
 Route::post('admin/update-booking',[BookingController::class,'updateBooking']);
 Route::get('delete-booking/{id}',[BookingController::class,'deleteBooking']);
 
-Route::get('post_photo', [AdminController::class, 'post_photo']);
+Route::middleware(['auth'])->group(function () {
+    Route::get('post_photo', [AdminController::class, 'post_photo']);
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/show_post', [AdminController::class, 'show_post']);
+});
+
 Route::post('add_photo', [AdminController::class, 'add_photo']);
-Route::get('/show_post', [AdminController::class, 'show_post']);
 Route::get('/delete_post/{id}', [AdminController::class, 'delete_post']);
 Route::get('/edit_post/{id}', [AdminController::class, 'edit_post']);
 Route::post('/update_post/{id}', [AdminController::class, 'update_post']);
