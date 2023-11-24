@@ -20,12 +20,15 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name: </th>
+                            <th>Name </th>
                             <th>Email</th>
                             <th>Phone</th>
                             <th>Date</th>
                             <th>Time</th>
-                            <th>Message</th>
+                            <th>Details</th>
+                            <th>Status</th>
+                            <th>Approved</th>
+                            <th>Canceled</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -33,18 +36,22 @@
                         @php
                             $i=1
                         @endphp
-                        @foreach ($data as $stu)
+                        @foreach ($data as $appoint)
                         <tr>
                             <td>{{$i++}}</td>
-                            <td>{{$stu->name}}</td>
-                            <td>{{$stu->email}}</td>
-                            <td>{{$stu->phone}}</td>
-                            <td>{{$stu->date}}</td>
-                            <td>{{$stu->time}}</td>
-                            <td>{{$stu->message}}</td>
-                            <td> <a href="{{url('admin/edit-booking/'.$stu->id )}}" class="btn btn-primary">Edit</a>
-                                | <a href="{{url('delete-booking/'.$stu->id )}}" class="btn btn-danger">Delete</td>
-                        </tr>
+                            <td>{{$appoint->name}}</td>
+                            <td>{{$appoint->email}}</td>
+                            <td>{{$appoint->phone}}</td>
+                            <td>{{$appoint->date}}</td>
+                            <td>{{$appoint->time}}</td>
+                            <td>{{$appoint->message}}</td>
+                            <td>{{$appoint->status}}</td>
+                            <td><a class="btn btn-success" href="{{url('approved',$appoint->id)}}">Approved</a></td>
+                            <td><a class="btn btn-danger" href="{{url('canceled',$appoint->id)}}">Canceled</a></td>
+
+                            <td> <a class="btn btn-success " href="{{url('admin/edit-booking/'.$appoint->id )}}" class="btn btn-primary">Edit</a>
+                                | <a href="{{url('delete-booking/'.$appoint->id )}}" class="btn btn-danger">Delete</td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>

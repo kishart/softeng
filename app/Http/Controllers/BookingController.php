@@ -4,13 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Booking;
-use App\Models\Appointment;
 use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
     public function index(){
-        $data = Booking::get();
+        $data = Booking::all();
         return view('admin/booking-list', compact('data'));
     }
     public function addBooking(){
@@ -36,19 +35,19 @@ class BookingController extends Controller
             $time= $request->time;
             $message= $request->message;
 
-            $stu = new Booking();
-            $stu->name = $name;
-            $stu->email = $email;
-            $stu->phone = $phone;
-            $stu->date = $date;
-            $stu->time = $time;
-            $stu->message = $message;
-            $stu->status = 'In progress';
+            $appoint = new Booking();
+            $appoint->name = $name;
+            $appoint->email = $email;
+            $appoint->phone = $phone;
+            $appoint->date = $date;
+            $appoint->time = $time;
+            $appoint->message = $message;
+            $appoint->status = 'In progress';
             if(Auth::id()){
-            $stu->user_id = Auth::user()->id;
+            $appoint->user_id = Auth::user()->id;
            
             }
-            $stu->save();
+            $appoint->save();
 
             return redirect()->back()->with('success', 'booking added successfully');
     }
@@ -104,5 +103,17 @@ class BookingController extends Controller
         $data->delete();
         return redirect()->back();
 
+    }
+    public function approved($id){
+        $data=booking::find($id);
+        $data->status="approved";
+        $data->save();
+        return redirect()->back();
+    }
+    public function canceled($id){
+        $data=booking::find($id);
+        $data->status="canceled";
+        $data->save();
+        return redirect()->back();
     }
 }

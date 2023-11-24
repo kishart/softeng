@@ -51,8 +51,10 @@ Route::middleware(['auth'])->group(function () {
 Route::get('user/photos', [HomeController::class, 'photos']);
 Route::get('user/profile', [BookingController::class, 'profile']);
 
-Route::get('/cancel_booking/{id}', [BookingController::class, 'cancel_booking']);
 
+
+Route::get('/approved/{id}', [BookingController::class, 'approved']);
+Route::get('/canceled/{id}', [BookingController::class, 'canceled']);
 
 
 Auth::routes();
