@@ -85,7 +85,9 @@ class AdminController extends Controller
       $data->save();
       return redirect()->back()->with('message', 'Post updated successfully');
       }
-
+    public function notification(){
+        return view('admin.notification');
+    }
 
 
 

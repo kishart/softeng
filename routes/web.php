@@ -96,3 +96,6 @@ Route::get('/admin/dashboard', function () {
      return view('admin.dashboard');
 });
 
+
+
+Route::get('admin/notification',[AdminController::class,'notification']);
