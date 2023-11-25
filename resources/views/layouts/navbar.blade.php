@@ -24,6 +24,7 @@
   a.navbar-brand.fs-4{
     color: #CD825B;
   }
+ 
   
  
 </style>

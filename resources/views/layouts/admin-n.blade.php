@@ -6,6 +6,8 @@
     <title>Document</title>
     
 <link rel="stylesheet" href="{{url('css/admin-n.css')}}">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 </head>
 
   <body>
@@ -14,6 +16,19 @@
   <div class="area"></div><nav class="main-menu">
             <ul>
                 <li>
+                    
+                    <a href="{{url('admin/booking-list')}}">
+                        <span class="material-symbols-outlined">
+                            assignment
+                            </span>
+                    </a>
+                </li>
+
+                
+
+
+                <li>
+                    
                     <a href="{{url('admin/booking-list')}}">
                         <i class="fa fa-book fa-2x"></i>
                         <span class="nav-text">
@@ -43,29 +58,12 @@
                     <a href="#">
                         <i class="fa fa-globe fa-2x"></i>
                         <span class="nav-text">
-                            Global Surveyors
+                            Notification
                         </span>
                     </a>
                     
                 </li>
-                <li class="has-subnav">
-                    <a href="#">
-                       <i class="fa fa-comments fa-2x"></i>
-                        <span class="nav-text">
-                            Group Hub Forums
-                        </span>
-                    </a>
-                    
-                </li>
-               
-                <li>
-                    <a href="#">
-                        <i class="fa fa-film fa-2x"></i>
-                        <span class="nav-text">
-                            Surveying Tutorials
-                        </span>
-                    </a>
-                </li>
+                
                
                 <li>
                    <a href="#">

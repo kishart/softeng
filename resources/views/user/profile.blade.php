@@ -30,7 +30,6 @@ td{
         <th>Date</th>
         <th>Time</th>
         <th>Status</th>
-        <th>Cancel Appointment</th>
     </tr>
 
     @foreach($book as $booking)
@@ -39,7 +38,6 @@ td{
         <td>{{$booking->date}}</td>
         <td>{{$booking->time}}</td>
         <td>{{$booking->status}}</td>
-        <td><a class="btn btn-danger" onclick="return confirm('Are you sure you want to cancel this appointment?')" href="{{url('cancel_booking', $booking->id)}}">Cancel</a></td>
     </tr>
 @endforeach
 

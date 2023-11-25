@@ -1,86 +1,74 @@
 @extends('layouts.navbar')
 @section('content')
+<link rel="stylesheet" href="{{url('css/contact.css')}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Inter&display=swap" rel="stylesheet">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" style="margin-top:20px">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title">Contact Us</h2>
+                @if(Session::has('success'))
+                <div class="alert alert-success" role="alert">
+                    {{Session::get('success')}}
+                </div>
+                @endif
+                <form method="post" action="{{url('save-booking')}}">
+                    @csrf
+                    <div class="md-3">
+                        <label class="form-label">Name:</label>
+                        <input type="text" class="form-control" name="name" 
+                        value="{{old('name')}}">
+                        @error('name')
+                        <div class="alert alert-danger" role="alert">
+                            {{($message)}}
+                        </div>
+                        @enderror
+                        
+                    </div>
+                    <div class="md-3">
+                        <label class="form-label">Email:</label>
+                        <input type="text" class="form-control" name="email" 
+                         value="{{old('email')}}">
+                        @error('email')
+                        <div class="alert alert-danger" role="alert">
+                            {{($message)}}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="md-3">
+                        <label class="form-label">Phone:</label>
+                        <input type="text" class="form-control" name="phone" 
+                        value="{{old('phone')}}">
+                        @error('phone')
+                        <div class="alert alert-danger" role="alert">
+                            {{($message)}}
+                        </div>
+                        @enderror
+                    </div>
+                   
+                    <div class="md-3">
+                        <label class="form-label">Message:</label>
+                        <textarea class="form-control" name="message" 
+                       > {{old('message')}}</textarea>
+                            @error('message')
+                            <div class="alert alert-danger" role="alert">
+                                {{($message)}}
+                            </div>
+                            @enderror 
+                    </div><br>
+                    <button type="submit"class="button-28" role="button">Submit</button>
+                </form>
 
-<style>
-.form {
-	max-width: 500px;
-	margin: 0 auto;
-	padding: 20px;
-	background-color: #f2f2f2;
-	border-radius: 5px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
+            </div>
+        </div>
+    </div>
 
-h1 {
-	text-align: center;
-	margin-bottom: 20px;
-}
 
-form {
-	display: flex;
-	flex-direction: column;
-}
-
-label {
-	font-weight: bold;
-	margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-input[type="time"],
-textarea {
-	padding: 10px;
-	margin-bottom: 20px;
-	border-radius: 5px;
-	border: none;
-	background-color: #f9f9f9;
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
-
-input[type="submit"] {
-	padding: 10px;
-	background-color: #4CAF50;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-input[type="submit"]:hover {
-	background-color: #3e8e41;
-}
-
-</style>
-
-<div class="form">
-  <h1>contact Booking Form</h1>
-  <form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone" required>
-
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date" required>
-
-    <label for="time">Time:</label>
-    <input type="time" id="time" name="time" required>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message"></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
 
 @endsection
