@@ -17,7 +17,7 @@
                     {{Session::get('success')}}
                 </div>
                 @endif
-                <form method="post" action="{{url('save-booking')}}">
+                <form method="post" action="{{url('save-contact')}}">
                     @csrf
                     <div class="md-3">
                         <label class="form-label">Name:</label>

@@ -41,11 +41,12 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/user/contact', function(){
-        return view('user.contact');
-    });
-});
+
+
+Route::get('user/add-booking',[BookingController::class,'addBooking']);
+
+Route::post('save-booking',[BookingController::class,'saveBooking']);
+
 
 
 Route::get('user/photos', [HomeController::class, 'photos']);
@@ -67,9 +68,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/booking-list', [BookingController::class, 'index']);
   
 });
-Route::get('user/add-booking',[BookingController::class,'addBooking']);
-
-Route::post('save-booking',[BookingController::class,'saveBooking']);
 
 Route::get('admin/edit-booking/{id}',[BookingController::class,'editBooking']);
 Route::post('admin/update-booking',[BookingController::class,'updateBooking']);
@@ -98,4 +96,8 @@ Route::get('/admin/dashboard', function () {
 
 
 
-Route::get('admin/notification',[AdminController::class,'notification']);
+
+Route::get('user/contact',[HomeController::class,'contact']);
+
+Route::post('save-contact',[HomeController::class,'saveContact']);
+
