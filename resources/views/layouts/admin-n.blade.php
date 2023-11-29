@@ -23,10 +23,6 @@
                             </span>
                     </a>
                 </li>
-
-                
-
-
                 <li>
                     
                     <a href="{{url('admin/booking-list')}}">
@@ -55,7 +51,7 @@
                   
                 </li>
                 <li class="has-subnav">
-                    <a href="#">
+                    <a href="{{url('/notification')}}">
                         <i class="fa fa-globe fa-2x"></i>
                         <span class="nav-text">
                             Notification
