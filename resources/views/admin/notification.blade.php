@@ -7,7 +7,7 @@
         <style>
             .card {
                 width: 70%;
-                margin: 0 auto;
+                margin: 30 auto;
                 padding: 10px;
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -18,6 +18,8 @@
             form {
                 display: flex;
                 flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
             }
         
             form p {
