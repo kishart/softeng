@@ -34,11 +34,6 @@ Route::middleware(['auth'])->group(function () {
     });
 });
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/user/notification', function(){
-        return view('user.notification');
-    });
-});
 
 
 
@@ -80,9 +75,6 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/show_post', [AdminController::class, 'show_post']);
 });
-Route::middleware(['auth'])->group(function () {
-    Route::get('/notification', [AdminController::class, 'notification']);
-});
 
 Route::post('add_photo', [AdminController::class, 'add_photo']);
 Route::get('/delete_post/{id}', [AdminController::class, 'delete_post']);
@@ -103,4 +95,8 @@ Route::get('/admin/dashboard', function () {
 Route::get('user/contact',[HomeController::class,'contact']);
 
 Route::post('save-contact',[HomeController::class,'saveContact']);
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/notification', [HomeController::class, 'notification']);
+});
 

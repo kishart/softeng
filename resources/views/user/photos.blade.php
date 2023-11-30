@@ -32,7 +32,7 @@
             </button>
         </div>
     
-    @endforeach
+        @endforeach
     
                 
             </div>

@@ -29,49 +29,17 @@
       flex-direction: column;
     }
     
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    label {
-      margin-bottom: 5px;
-    }
-    
-    input[type="text"],
-    input[type="password"],
-    input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    
-    input[type="submit"] {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    
-    input[type="submit"]:hover {
-      background-color: #0056b3;
-    }
-    
     </style>
-    
+    @foreach ($data as $appoint)
     <div class="card">
         <form>
-          <p>Name: <span>Kish Hart</span></p>
-          <p>Email: <span>hart@gmail.com</span> </p>
-          <p>Phone Number: <span>09981518420</span></p>
-          <p>Message: <span>I want to change my date</span></p>
-          <p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
-
+            <p>Name: <span>{{$appoint->name}}</span></p>
+            <p>Email: <span>{{$appoint->email}}</span> </p>
+            <p>Phone Number: <span>{{$appoint->phone}}</span></p>
+            <p>Message: <span>{{$appoint->message}}</span></p>
         </form>
-      </div>
-    
 
-</html>
+      </div>
+
+      @endforeach
+   

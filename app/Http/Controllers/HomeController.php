@@ -65,6 +65,13 @@ public function profile()
         return redirect()->back();
     }
 }
+    
+public function notification(){
+        $data = Contact::all();
+        return view('admin/notification', compact('data'));
+    }
+    
+
 public function contact()
     {
         return view('user.contact');
@@ -74,9 +81,7 @@ public function contact()
                 'name' => 'required',
                 'email' => 'required|email',
                 'phone' => 'required',
-                'message'=> 'required'
-
-                
+                'message'=> 'required'  
             ]);
 
             $name= $request->name;
