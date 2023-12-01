@@ -49,8 +49,8 @@ Route::get('user/profile', [BookingController::class, 'profile']);
 
 
 
-Route::get('/approved/{id}', [BookingController::class, 'approved']);
-Route::get('/canceled/{id}', [BookingController::class, 'canceled']);
+Route::get('/accepted/{id}', [BookingController::class, 'accepted']);
+Route::get('/declined/{id}', [BookingController::class, 'declined']);
 
 
 Auth::routes();

@@ -36,7 +36,7 @@
 
 
 
-    <h1 class="post_title">Add Post</h1>
+    <h1 class="post_title">Upload Photos</h1>
 
     <div>
         <form action="{{url('add_photo')}}" method="POST" enctype="multipart/form-data">
@@ -48,12 +48,12 @@
             </div>
   
             <div class="div_center">
-                <label>Best Shot</label>
+                <label>Image 1</label>
                 <input type="file" name="image1">
                
             </div>
             <div class="div_center">
-                <label>Feedback</label>
+                <label>Image 2</label>
                 <input type="file" name="image2">
               
             </div>

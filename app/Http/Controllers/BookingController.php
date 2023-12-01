@@ -104,15 +104,15 @@ class BookingController extends Controller
         return redirect()->back();
 
     }
-    public function approved($id){
+    public function accepted($id){
         $data=booking::find($id);
-        $data->status="approved";
+        $data->status="Accepted";
         $data->save();
         return redirect()->back();
     }
-    public function canceled($id){
+    public function declined($id){
         $data=booking::find($id);
-        $data->status="canceled";
+        $data->status="Declined";
         $data->save();
         return redirect()->back();
     }

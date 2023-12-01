@@ -46,8 +46,8 @@
                             <td>{{$appoint->time}}</td>
                             <td>{{$appoint->message}}</td>
                             <td>{{$appoint->status}}</td>
-                            <td><a class="btn btn-success" href="{{url('approved',$appoint->id)}}">Approved</a></td>
-                            <td><a class="btn btn-danger" href="{{url('canceled',$appoint->id)}}">Canceled</a></td>
+                            <td><a class="btn btn-success" href="{{url('accepted',$appoint->id)}}">Accepted</a></td>
+                            <td><a class="btn btn-danger" href="{{url('declined',$appoint->id)}}">Declined</a></td>
 
                             <td> <a class="btn btn-success " href="{{url('admin/edit-booking/'.$appoint->id )}}" class="btn btn-primary">Edit</a>
                                 | <a href="{{url('delete-booking/'.$appoint->id )}}" class="btn btn-danger">Delete</td>
