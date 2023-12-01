@@ -14,6 +14,13 @@
     }
     .div_center{
         text-align: center;
+        padding-left: 60px;
+        padding-bottom: 60px;
+        padding-top: 10px;
+        display: inline-block
+    }
+.button{
+        text-align: center;
         padding: 30px;
     }
     label{
@@ -68,7 +75,7 @@
         <input type="file" name="image2" value="{{$post->image2}}">
       
     </div>
-    <div class="div_center">
+    <div class="button">
         <input type="submit" value="Update" class="btn btn-primary">
     </div>
    
