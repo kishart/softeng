@@ -2,12 +2,18 @@
 @section('content')
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-
-
+<style>
+    /* Style for carousel images */
+    .carousel-item img {
+        display: block;
+        margin: 0 auto; /* Centers the image */
+        max-width: 550px; /* Adjust the width as needed */
+        height: auto;
+    }
+</style>
 
 <div class="services_section layout_padding">
     <div class="container">
-        <h1 class="services_taital">Blog Posts</h1>
       
         @foreach($post as $post)
 
@@ -41,4 +47,3 @@
 </div>
 
 @endsection
-
