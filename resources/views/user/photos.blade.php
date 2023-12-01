@@ -7,9 +7,23 @@
     .carousel-item img {
         display: block;
         margin: 0 auto; /* Centers the image */
-        max-width: 550px; /* Adjust the width as needed */
+        max-width: 800px; /* Adjust the width as needed */
         height: auto;
+        
+      
     }
+    h4{
+        
+        padding-top: 5%;
+        color: #854836;
+    }
+    .services_section{
+background-color: bisque;
+    }
+    .carousel-item{
+        padding-bottom: 5%;
+    }
+  
 </style>
 
 <div class="services_section layout_padding">
@@ -17,7 +31,7 @@
       
         @foreach($post as $post)
 
-        <h4>{{$post->title}}</h4>
+        <h4 class="text-center   ">{{$post->title}}</h4>
     
         <div id="carouselExampleControls{{$post->id}}" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
