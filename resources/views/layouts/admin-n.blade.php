@@ -44,9 +44,9 @@
                 </li>
                 <li class="has-subnav">
                     <a href="{{url('/notification')}}">
-                        <i class="fa fa-bell fa-2x"></i>
+                        <i class="fa fa-comment"></i>
                         <span class="nav-text">
-                            Notification
+                            Message
                         </span>
                     </a>
                     
