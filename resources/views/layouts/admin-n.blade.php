@@ -8,6 +8,19 @@
 <link rel="stylesheet" href="{{url('css/admin-n.css')}}">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
+<style>
+    /* Added CSS */
+    .main-menu li a {
+        display: block;
+        padding: 10px 0 20px; /* Added bottom padding */
+        text-decoration: none;
+    }
+
+    .main-menu li a i {
+        font-size: 30px; /* Increased icon size */
+        padding-top: 10px;
+    }
+</style>
 </head>
 
   <body>
@@ -16,7 +29,14 @@
     <nav class="main-menu">
             <ul>
                 <li>
-                    
+                    <a href="{{url('admin/admin')}}">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                           Home
+                        </span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{url('admin/booking-list')}}">
                         <i class="fa fa-list fa-2x"></i>
                         <span class="nav-text">

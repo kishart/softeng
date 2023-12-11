@@ -2,67 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<style>
+  <title>Simple Dashboard</title>
+  <style>
     body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
 
-.navbar {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-}
+    h1 {
+      margin-bottom: 20px;
+    }
 
-.navbar h1 {
-  margin: 0;
-  font-size: 36px;
-}
+    nav {
+      display: inline-block;
+      background-color: #333;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
 
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
 
-.navbar ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.content {
-  padding: 20px;
-  /* Add styles for the admin content area */
-}
-
-</style>
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
 <body>
-
-  <div class="navbar">
-    <h1>Admin Dashboard</h1>
-    <!-- Add admin-specific links or options here -->
-    <ul>
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">Users</a></li>
-      <li><a href="#">Settings</a></li>
-      <!-- Add more links as needed -->
-    </ul>
-  </div>
-
-  <div class="content">
-    <!-- Admin content goes here -->
-    <h2>Welcome, Admin!</h2>
-    <!-- Add more admin-specific content -->
-  </div>
-
+  <h1>Welcome to Your Dashboard</h1>
+  <nav>
+    <a href="{{url('admin/booking-list')}}">Booking List</a>
+    <a href="{{url('post_photo')}}">Upload Photos</a>
+    <a href="{{url('/show_post')}}">Show Post</a>
+    <a href="{{url('/notification')}}">Message</a>
+  </nav>
 </body>
 </html>

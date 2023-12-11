@@ -24,6 +24,11 @@ Route::middleware(['auth'])->group(function () {
         return view('home');
     });
 });
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin/admin', function(){
+        return view('admin.admin');
+    });
+});
 
 
 
