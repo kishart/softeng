@@ -52,7 +52,6 @@
     <table class="table_deg">
         <tr class="th_deg">
             <th>Title</th>
-            <th>Description</th>
             <th>Post Status</th>
             <th>Best Shot</th>
             <th>Feedback</th>
@@ -64,7 +63,6 @@
     @foreach($post as $post)
         <tr>
             <td>{{$post->title}}</td>
-            <td>{{$post->description}}</td>
             <td>{{$post->post_status}}</td>
             <td><img class="img_deg" src="postimage1/{{$post->image1}}"></td>
             

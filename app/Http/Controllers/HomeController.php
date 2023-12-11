@@ -71,6 +71,7 @@ public function notification(){
         return view('admin/notification', compact('data'));
     }
     
+    
 
 public function contact()
     {
