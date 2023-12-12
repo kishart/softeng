@@ -13,7 +13,7 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background-color: #f4f4f4;
+      background-color: #F2C1A8;
     }
 
     h1 {
@@ -22,8 +22,8 @@
 
     nav {
       display: inline-block;
-      background-color: #333;
-      padding: 10px 20px;
+      background-color: #ce6b4d;
+      padding: 30px 20px;
       border-radius: 5px;
     }
 
@@ -31,15 +31,17 @@
       color: white;
       text-decoration: none;
       margin: 0 10px;
+      
+  transition: background-color 0.5s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background-color: #854836;
+      padding: 20px 20px;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Your Dashboard</h1>
   <nav>
     <a href="{{url('admin/booking-list')}}">Booking List</a>
     <a href="{{url('post_photo')}}">Upload Photos</a>

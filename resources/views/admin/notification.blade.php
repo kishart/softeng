@@ -35,7 +35,7 @@
             }
         </style>
         
-        <h1 class="text-center ">Notification</h1>
+        <h1 class="text-center ">Messages</h1>
         @foreach ($data as $appoint)
         
             <div class="card">

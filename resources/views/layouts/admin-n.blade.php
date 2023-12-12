@@ -28,14 +28,7 @@
   
     <nav class="main-menu">
             <ul>
-                <li>
-                    <a href="{{url('admin/admin')}}">
-                        <i class="fa fa-home fa-2x"></i>
-                        <span class="nav-text">
-                           Home
-                        </span>
-                    </a>
-                </li>
+                
                 <li>
                     <a href="{{url('admin/booking-list')}}">
                         <i class="fa fa-list fa-2x"></i>

@@ -56,10 +56,10 @@
                   <a class="nav-link" aria-current="page" href="/home">Home</a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link" href="/user/photos">Photos</a>
+                  <a class="nav-link" href="/user/photos">View Photos</a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link"  href="/user/profile">My Appointment</a>
+                  <a class="nav-link"  href="/user/profile">My Appointments</a>
                 </li>
                 <li class="nav-item mx-2">
                   <a class="nav-link" href="/user/contact">Contact</a>
