@@ -49,12 +49,12 @@
   
             <div class="div_center">
                 <label>Image 1</label>
-                <input type="file" name="image1">
+                <input type="file" name="image1" accept="image/*">
                
             </div>
             <div class="div_center">
                 <label>Image 2</label>
-                <input type="file" name="image2">
+                <input type="file" name="image2" accept="image/*">
               
             </div>
             <div class="div_center">
@@ -64,3 +64,26 @@
         </form>
     </div>
 </div>
+<script>
+    function validateForm() {
+        const fileInputs = document.querySelectorAll('input[type="file"]');
+        let valid = true;
+
+        fileInputs.forEach(input => {
+            if (input.value !== '') {
+                const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+                if (!allowedExtensions.exec(input.value)) {
+                    valid = false;
+                }
+            }
+        });
+
+        if (!valid) {
+            alert('Please upload only image files (jpg, jpeg, png, gif).');
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
