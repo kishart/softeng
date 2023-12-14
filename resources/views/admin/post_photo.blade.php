@@ -79,7 +79,7 @@
         });
 
         if (!valid) {
-            alert('Please upload only image files (jpg, jpeg, png, gif).');
+            alert('Please upload only image files (jpg, jpeg, png).');
             return false;
         }
 

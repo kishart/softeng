@@ -7,6 +7,11 @@
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+<style>
+    .form-label {
+    margin-top: 15px;just this value to set the desired margin */
+}
+</style>
 <body>
     <div class="container" style="margin-top:20px">
         <div class="row">
@@ -31,7 +36,7 @@
                         
                     </div>
                     <div class="md-3">
-                        <label class="form-label">Email:</label>
+                        <label class="form-label ">Email:</label>
                         <input type="text" class="form-control" name="email" 
                          value="{{old('email')}}">
                         @error('email')
